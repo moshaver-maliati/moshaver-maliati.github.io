@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>کاور اینستاگرام 9:16 — تصویر شاخص بالا</title>
+  <title>کاور اینستاگرام 9:16 — مشاوره مالیاتی مصطفی محمودی</title>
 
   <!-- فونت وزیر -->
   <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
@@ -14,6 +14,7 @@
       --accent: #f97316;
       --text: #ffffff;
       --muted: rgba(255,255,255,0.85);
+      --highlight: #ffd166;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,16 +36,17 @@
       justify-content: flex-start;
       align-items: center;
       text-align: center;
+      position: relative;
     }
 
-    /* تصویر شاخص */
+    /* تصویر شاخص بالا */
     .cover-image {
       width: 100%;
-      height: 40%; /* بخش بالای کاور */
+      height: 40%;
       background: url("https://mohaseban.org/wp-content/uploads/2024/12/%D9%86%D8%AD%D9%88%D9%87-%D8%AA%D9%85%D8%AF%DB%8C%D8%AF-%DA%A9%D8%A7%D8%B1%D8%AA-%D8%A8%D8%A7%D8%B2%D8%B1%DA%AF%D8%A7%D9%86%DB%8C.webp") center/cover no-repeat;
     }
 
-    /* بخش متنی زیر تصویر */
+    /* محتوای اصلی */
     .content {
       flex: 1;
       display: flex;
@@ -70,55 +72,60 @@
     .subtitle {
       font-size: clamp(14px, 2.8vw, 20px);
       color: var(--muted);
-      max-width: 80%;
+      max-width: 85%;
       line-height: 1.6;
     }
 
-    .cta {
-      margin-top: 12px;
-      background: linear-gradient(90deg, var(--accent), #ff7a59);
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      padding: 12px 26px;
-      border-radius: 10px;
-      box-shadow: 0 6px 20px rgba(249, 115, 22, 0.3);
-    }
-
-    /* کارت کوچک پایین */
-    .card {
+    /* بخش اطلاعات تماس و نام مشاور */
+    .contact-box {
       position: absolute;
-      bottom: 20px;
-      right: 20px;
-      background: rgba(255,255,255,0.08);
-      backdrop-filter: blur(6px);
-      padding: 10px 14px;
-      border-radius: 12px;
+      bottom: 30px;
+      right: 50%;
+      transform: translateX(50%);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 20px 26px;
+      text-align: center;
       border: 1px solid rgba(255,255,255,0.1);
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      color: var(--muted);
-      font-size: 13px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
     }
 
-    .card div:first-child {
-      width: 40px;
-      height: 40px;
-      border-radius: 8px;
-      background: linear-gradient(180deg, #fff, rgba(255,255,255,0.85));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #111;
+    .contact-name {
+      font-size: clamp(20px, 4.5vw, 28px);
       font-weight: 800;
+      color: var(--highlight);
+      margin-bottom: 8px;
     }
 
+    .contact-role {
+      font-size: clamp(14px, 3vw, 18px);
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .contact-phone {
+      font-size: clamp(18px, 4vw, 24px);
+      font-weight: 700;
+      color: var(--text);
+      direction: ltr;
+    }
+
+    .contact-phone span {
+      display: block;
+      margin-top: 4px;
+    }
+
+    /* واکنش‌گرایی */
     @media (max-width: 500px) {
       .stage { border-radius: 12px; }
       .content { padding: 20px; }
       .subtitle { max-width: 95%; }
-      .card { bottom: 12px; right: 12px; padding: 8px 10px; }
+      .contact-box {
+        padding: 16px 20px;
+        bottom: 16px;
+        border-radius: 12px;
+      }
     }
   </style>
 </head>
@@ -132,16 +139,16 @@
     <div class="content">
       <div class="brand">مشاوره مالیاتی • مصطفی محمودی</div>
       <h1 class="title">شرایط تمدید کارت بازرگانی</h1>
-      <p class="subtitle">راهنمای کامل مراحل و مدارک لازم برای تمدید کارت بازرگانی — به‌روز و دقیق</p>
-      <a class="cta" href="#">دریافت مشاوره</a>
+      <p class="subtitle">راهنمای کامل مدارک و مراحل تمدید کارت بازرگانی — دقیق، سریع و مطمئن</p>
     </div>
 
-    <!-- کارت معرفی -->
-    <div class="card">
-      <div>M</div>
-      <div>
-        <div style="font-weight:700">مصطفی محمودی</div>
-        <div style="opacity:0.85;font-size:12px">مشاوره مالیاتی و حسابرسی</div>
+    <!-- اطلاعات تماس برجسته -->
+    <div class="contact-box">
+      <div class="contact-name">مصطفی محمودی</div>
+      <div class="contact-role">مشاور امور مالیاتی و حسابرسی</div>
+      <div class="contact-phone">
+        📱 09173800604
+        <span>☎️ 07733330888</span>
       </div>
     </div>
   </div>
